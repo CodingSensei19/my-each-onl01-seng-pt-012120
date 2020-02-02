@@ -1,19 +1,13 @@
-def my_each(array)
-  i = 0
-  while i < array.length
-    yield(array[i])
-    i = i + 1
-  end
+collection = [1, 2, 3, 4]
+
+def my_each(collection)
+ 
+ i=0
+ while i < collection.length 
+ yield(collection[i])
+ i+=1
+ end 
+ collection
 end
 
-
-
-def hello(array)
-  i = 0
-  collection = []
-  while i < array.length
-    collection << yield(array[i])
-    i += 1
-  end
-  collection
-end
+my_each(collection) {|x| puts x}
